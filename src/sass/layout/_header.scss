@@ -1,0 +1,64 @@
+header {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  z-index: 1100;
+}
+.header {
+  &__background {
+    background-color: $background-color;
+    box-sizing: border-box;
+  }
+  &__container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @extend %flex-a;
+    justify-content: space-between;
+  }
+  &__logo {
+    color: $accent-color;
+    @include font(400, 22px, 28px);
+    margin-right: 40px;
+    &:hover {
+      font-size: 23px;
+      @include transition(font-size);
+    }
+  }
+  &__nav {
+    display: flex;
+    &_list {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_item:not(:last-child) {
+      margin-right: 40px;
+    }
+    &_item:last-child {
+      margin-right: 490px;
+    }
+    &_link {
+      color: $text-color;
+      text-transform: uppercase;
+      @include font(400, 11px, 24px);
+
+      &:hover {
+        color: $accent-color;
+        @include transition(color);
+      }
+    }
+  }
+  &__button {
+    width: 147px;
+    height: 50px;
+    border: 1px solid $accent-color;
+    color: $accent-color;
+    background-color: $background-color;
+    text-transform: uppercase;
+    @include font(400, 11px, 20px);
+    &:hover {
+      cursor: pointer;
+      font-size: 12px;
+      @include transition(font-size);
+    }
+  }
+}
