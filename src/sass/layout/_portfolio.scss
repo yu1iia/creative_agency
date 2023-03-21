@@ -1,0 +1,7 @@
+.portfolio {
+  height: 600px;
+  background-image: url('../images/portfolio.png');
+  background-repeat: no-repeat;
+  @extend %block-m;
+  margin-top: 120px;
+}

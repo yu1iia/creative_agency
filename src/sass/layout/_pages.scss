@@ -1,0 +1,41 @@
+.pages {
+  padding-top: 120px;
+  &__container {
+    text-align: center;
+  }
+  &__description {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    @include font(400, 12px, 22px);
+  }
+  &__title {
+    color: $accent-color;
+    @include font(400, 60px, 70px);
+    margin-bottom: 60px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    padding: 41px 41px 20px;
+    border: 1px solid #4b4136;
+    &:not(:nth-child(3n)) {
+      margin-right: 20px;
+    }
+    &:not(:nth-last-child(-n + 3)) {
+      margin-bottom: 20px;
+    }
+    & img {
+      width: 302px;
+      height: 190px;
+    }
+    &_description {
+      text-transform: uppercase;
+      color: $text-color;
+      @include font(400, 13px, 23px);
+    }
+  }
+}
