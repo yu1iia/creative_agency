@@ -1,0 +1,49 @@
+.subscription {
+  margin-top: 120px;
+  margin-bottom: 20px;
+  &__container {
+    text-align: center;
+  }
+  &__title {
+    @include font(400, 60px, 70px);
+    color: $accent-color;
+    margin-bottom: 35px;
+  }
+  &__description {
+    @include font(400, 12px, 28px);
+    margin-bottom: 85px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid #4b4136;
+    width: 420px;
+    height: 108px;
+    margin-bottom: 32px;
+    & input {
+      width: 420px;
+      height: 54px;
+      background-color: $background-color;
+      border-top: none;
+      border-right: 1px solid #4b4136;
+      border-left: 1px solid #4b4136;
+    }
+    & button {
+      width: 420px;
+      height: 54px;
+      background-color: $accent-color;
+      border: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &__policy {
+    @include font(400, 14px, 20px);
+    &_accent {
+      color: $accent-color;
+    }
+  }
+}
