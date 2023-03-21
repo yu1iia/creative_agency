@@ -1,0 +1,26 @@
+.contact {
+  &__container {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #4b4136;
+  }
+
+  &__list {
+    @extend %flex-a-j;
+  }
+  &__item {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #4b4136;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    & a {
+      display: block;
+      padding: 13px;
+    }
+    &:hover {
+      background-color: $accent-color;
+      @include transition(background-color);
+    }
+  }
+}
